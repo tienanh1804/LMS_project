@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Filtered books</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="start">logo</div>
+        <div class="middle">
+        </div>
+        <div class="end">
+            <div class="ava_menu">
+
+                <div>
+                    <img class="ava" src="../img/81nq+ewtkcL._AC_UF1000,1000_QL80_.jpg">
+                </div>
+                <div class="account_name">
+                    Account name
+                </div>
+                <div class="ava-dropdown" style="display: none;">
+                    <button class="profile" onclick="goToUserProfile()">
+                        Profile
+                    </button>
+                    <button class="change-password" onclick="goToChangePassword()">
+                        Change password
+                    </button>
+                </div>
+                <img class="drop_down_menu" src="../img/icons8-expand-arrow-64.png" width="25px" height="25px"
+                    onclick="drop_down_menu()">
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="menu">
+            <button class="bookshelf" onclick="goToDashboard()">
+                <img src="../img/icons8-dashboard-50.png" width="30" height="30">
+                Dashboard
+            </button>
+            <button class="bookshelf" onclick="goToAddBook()">
+                <img src="../img/icons8-bookshelf-96.png" width="30" height="30">
+                Add Book
+            </button>
+            <button class="wishlist" onclick="goToGenre()">
+                <img src="../img/icons8-bookmark-96.png" width="30" height="30">
+                Genre
+            </button>
+            <button class="wishlist" onclick="goToIssued()">
+                <img src="../img/icons8-check-book-100.png" width="30" height="30">
+                Issued
+            </button>
+            <button class="wishlist" style=" background-color: #F8F7EC;" onclick="goToUser()">
+                <img src="../img/icons8-user-groups-100.png" width="30" height="30">
+                Users
+            </button>
+            <div>
+                <button class="log_out_button" onclick="logOut()">
+                    <img src="../img/icons8-log-out-96.png" width="30" height="30">
+                    Logout
+                </button>
+            </div>
+        </div>
+        <div class="main_board">
+            <div class="white_container">
+                <div class="searchTitle">
+                    Search for user:
+                </div>
+                <div>
+                    <input class="userSearch" type="search" placeholder="Input username...">
+                    <button class="addUser">
+                        Search
+                    </button>
+                </div>
+                <div class="issued-book-table">
+                    <table border="2" id="issuedBookTable">
+                        <thead style="background-color: rgb(59, 52, 47);">
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Full name</th>
+                                <th>Email</th>
+                                <th>Gender</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../js/functions.js"></script>
+
+    <script src="../js/adminUsers.js"></script>
+</body>
+
+</html>

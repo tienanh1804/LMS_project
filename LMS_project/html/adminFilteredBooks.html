@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Filtered books</title>
+    <link rel="stylesheet" href="../css/wishList.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="start">logo</div>
+        <div class="middle">
+            <form id="searchForm" action="../html/FilteredBooks.html" method="get" class="filter-form">
+                <img class="find" src="../img/icons8-search-48.png" width="18" height="18">
+                <input class="enterSpace" type="text" id="searchInput" name="search"
+                    placeholder="Search for name or author...">
+            </form>
+        </div>
+            <div class="end">
+                <div class="ava_menu">
+                   
+                    <div >
+                        <img class="ava" src="../img/81nq+ewtkcL._AC_UF1000,1000_QL80_.jpg" >
+                    </div>
+                    <div class="account_name">
+                        Account name
+                    </div>
+                    <div class="ava-dropdown" style="display: none;">
+                        <button class="profile" onclick="goToUserProfile()">
+                            Profile
+                        </button>    
+                        <button class="change-password" onclick = "goToChangePassword()">
+                            Change password
+                        </button>
+                    </div>
+                    <img class="drop_down_menu" src="../img/icons8-expand-arrow-64.png" 
+                    width="25px" height="25px" onclick="drop_down_menu()">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="menu">
+            <button class="home" onclick="goToHome()">
+                <img src="../img\icons8-home-96.png" width="30" height="30">
+                Home
+            </button>
+            <button class="bookshelf" onclick="goToBookshelf()">
+                <img src="../img/icons8-bookshelf-96.png" width="30" height="30">
+                Bookshelf
+            </button>
+            <button class="wishlist" onclick="goToWishlist()">
+                <img src="../img/icons8-bookmark-96.png" width="30" height="30">
+                Wishlist
+            </button>
+            <div>
+                <button class="log_out_button" onclick="logOut()">
+                    <img src="../img/icons8-log-out-96.png" width="30" height="30">
+                    Logout
+                </button>
+            </div>
+        </div>
+        <div class="main_board">
+            <div class="white_container">
+                <div id="error_message" style="text-align: center; width: 100%; font-size: 20px;"></div>
+                <div class="white_container2">
+                    <div id="search-results"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="../js/functions.js"></script>
+    <script type="module" src="../js/admin_filter_book.js"> </script>
+    <script src="../js/adminSearch.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!-- admin -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Genre</title>
+    <link rel="stylesheet" href="../css/addBook.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header" style="width:100%">
+        <div class="start">logo</div>
+        <div class="middle"></div>
+        <div class="end">
+            <div class="ava_menu">
+
+                <div>
+                    <img class="ava" src="../img/81nq+ewtkcL._AC_UF1000,1000_QL80_.jpg">
+                </div>
+                <div class="account_name">
+                    Account name
+                </div>
+                <div class="ava-dropdown" style="display: none;">
+                    <button class="profile">
+                        Profile
+                    </button>
+                    <button class="change-password"
+                    onclick = "goToChangePassword()">
+                        Change password
+                    </button>
+                </div>
+                <img class="drop_down_menu" src="../img/icons8-expand-arrow-64.png" width="25px" height="25px"
+                    onclick="drop_down_menu()">
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="menu">
+            <button class="bookshelf" onclick="goToDashboard()">
+                <img src="../img/icons8-dashboard-50.png" width="30" height="30">
+                Dashboard
+            </button>
+            <button class="bookshelf" onclick="goToAddBook()">
+                <img src="../img/icons8-bookshelf-96.png" width="30" height="30">
+                Add Book
+            </button>
+            <button class="wishlist" style=" background-color: #F8F7EC;" onclick="goToGenre()">
+                <img src="../img/icons8-bookmark-96.png" width="30" height="30">
+                Genre
+            </button>
+            <button class="wishlist" onclick="goToIssued()">
+                <img src="../img/icons8-check-book-100.png" width="30" height="30">
+                Issued
+            </button>
+            <button class="wishlist" onclick="goToUser()">
+                <img src="../img/icons8-user-groups-100.png" width="30" height="30">
+                Users
+            </button>
+            <div>
+                <button class="log_out_button" onclick="logOut()">
+                    <img src="../img/icons8-log-out-96.png" width="30" height="30">
+                    Logout
+                </button>
+            </div>
+        </div>
+        <div class="main_board">
+            <div class="white_container" style="min-height: 800px;">
+                <div class="top">
+                    <button class="Search">
+                        MODIFY GENRE
+                    </button>
+                    <button class="Manual-entry" style="border: none;" onclick="goToAdd()">
+                        ADD GENRE
+                    </button>
+                </div>
+                <div class="middle2">
+                    <p class="title"> Select Genre</p>
+                    <div class="custom-dropdown">
+                        <input class="genre-search" id="genre_text_1" type="text" placeholder="Select Genre">
+                        <div class="result-box" id="result-box-1"></div>
+                    </div>
+
+                    <!-- New div to contain genre tags -->
+                    <div class="genre-tags-container" id="genre-tags-container-1"></div>
+
+                    <p class="note">Choose the collection want to modify.</p>
+
+                    <p class="title"> Enter new title</p>
+                    <input required class="book-search" id="new-title-1" type="text">
+                    <p class="note">Limit 40 characters.</p>
+
+                    <p class="title title-description"> Enter new Description</p>
+                    <textarea class="new-title-description book-search" id="new-title-description-1" type="text" style="min-height: 250px; word-wrap: break-word;"></textarea>
+                    <p class="note"> If you don't want to change the description, then no need to fill this.</p>
+
+                    <button class="Search-button" id="modify_button"" style="display: block;">
+                        Change
+                    </button>
+                </div>
+
+            </div>
+            <div class="add-container">
+                <div class="top">
+                    <button class="Search" style="border: none;" onclick="goToModify()">
+                        MODIFY GENRE
+                    </button>
+                    <button class="Manual-entry">
+                        ADD GENRE
+                    </button>
+                </div>
+                <div class="middle2">
+                    <p class="title"> Genre Title</p>
+                    <input class="genre-search" id="new-title-2" type="text">
+                    <p class="note">Limit 40 characters.</p>
+
+                    <textarea required class="new-title-description book-search" id="new-title-description-2" type="text" style="min-height: 250px; word-wrap: break-word;"></textarea>
+
+                    <button class="Search-button" id="add_button" style="display: block;">
+                        Add
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/functions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js"></script>
+    <script src="../js/genre_search.js"></script>
+    <script src="../js/admin_genre_control.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.ava-dropdown').select2();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+body {
+    background-color: #DCC9AD;
+    padding: 30px 50px;
+}
+
+.board {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    height: 575px;
+    border-radius: 15px;
+    box-shadow: -10px 10px 30px #3d0f17d7 ;
+}
+
+.board_img {
+    display: inline-block;
+    
+}
+
+.the_img {
+    border-radius: 15px 15px 15px 15px;
+}
+
+.login_board {
+    font-family: Shippori Mincho;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 480px;
+    margin: 30px 0px 90px 70px;
+    padding-left: 70px;
+
+}
+.logo{
+    height: 130px;
+    background-color: #cdcbca;
+    margin-right: 140px;
+}
+.sign_up{
+    display: inline-block;
+    height: 60px;
+    text-align: right;
+}
+.signUpButton
+{
+    
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: #6288C9;
+    margin-right: 140px;
+    text-align: right;
+    font-size: 13px;
+    line-height: 2px;
+}
+.signUpButton:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.username{
+    display: grid;
+    display: inline-block;
+    height: 100px;
+    
+}
+.password{
+    display: grid;
+    display: inline-block;
+    height: 100px;
+}
+.Text
+{
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 2px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.enterSpace
+{
+    width: 300px;
+    height: 35px;
+    border: none;
+    box-shadow: -1px 1px 5px rgba(148, 146, 146,0.45);
+    border-radius: 15px;
+    padding-left: 12px;
+}
+.sign_in
+{
+    display: inline-block;    
+    height: 130px;
+}
+.signInButton
+{
+    font-family: Shippori Mincho ;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 18px;
+    background-color:#CEB38D;
+    color: white;
+    width: 200px;
+    height: 50px;
+    padding-bottom: 4px;
+}
+.signInButton:hover
+{
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.signInButton:disabled, .signInButton:disabled:hover {
+    opacity: 0.6;
+}
+.enterSpace:focus
+{
+    outline: none; 
+    border: none; 
+}

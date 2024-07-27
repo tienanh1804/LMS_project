@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../css/signUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="board">
+        <div class="board_img">
+            <img src="../img/9781911344186.png" width="575px" height="575px" class="the_img">
+        </div>
+        <div class="login_board">
+            <div class="logo">
+                LOGO
+            </div>
+            <form method="post" class ="signUpForm">
+                <div class="username">
+                    <div class="Text">
+                        User name
+                    </div>
+                    <input required class="enterSpace" type="text" name="username" placeholder="Enter your user name">
+                </div>
+                <div class="password">
+                    <div class="Text">
+                        Password
+                    </div>
+                    <input required class="enterSpace" type="password" name="password" placeholder="Enter your password">
+                </div>
+                <div class="password">
+                    <div class="password">
+                        <div class="Text">
+                            Repeat password
+                        </div>
+                        <input required class="enterSpace" type="password" name="repeat_password" placeholder="Enter your password">
+                    </div>
+                </div>
+                
+                <div class="sign_in" >
+                    <button class="signUpButton">
+                            Sign up
+                    </button>
+                </div>
+            </form>
+            <div class="signInText">
+                <p>
+                    Already have an account? 
+                    <button class="signInButton" onclick = "goToLogIn()">
+                        Sign in.
+                    </button>
+                </p>
+            </div>
+            <div id="error_message" 
+             style="display:none;
+                   color:rgb(191, 78, 78);" 
+             class="error_message"></div>
+        </div>
+    </div>
+    <script src="../js/functions.js"></script>
+    <script src="../js/sign_up.js"></script>
+</body>
+
+</html>
