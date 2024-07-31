@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_reservation = "UPDATE reservation SET reservation_status_id = 2 WHERE book_id = ?";
     $sql_borrow = "UPDATE borrow SET borrow_date = NOW() WHERE book_id = ?";
 
+    
     // Prepare and execute SQL statements
     $stmt_reservation = $conn->prepare($sql_reservation);
     $stmt_borrow = $conn->prepare($sql_borrow);
