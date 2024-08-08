@@ -7,7 +7,6 @@ if ($_SESSION['user_id'] == 0) {
     exit();
 }
 
-// Get the book ID from the query string
 $book_id = $_GET['book_id'];
 
 // Check the request method
